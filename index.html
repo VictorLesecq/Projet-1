@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<meta charset="utf-8" />
+	 	<link rel="stylesheet" href="style.css"/>
+         <script src="https://kit.fontawesome.com/a524bcc808.js" crossorigin="anonymous"></script>
+		<title>Booki</title>
+	</head>
+
+    <body>
+    <header>
+        <img class="logo" src="\Images Booki\logo\Booki.png">
+        <nav>
+            <ul>
+                <li><a class="lien_nav" href="#hebergement">Hébergements</a></li>
+                <li><a class="lien_nav" href="#activites">Activités</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h1>Trouver votre hébergement pour des vacances de rêve</h1>
+            <p>En plein centre-ville ou en nature</p>
+            <form action="">
+                <div class="recherche">
+                    <label for="localisation"><i class="fa-solid fa-location-dot"></i></label><!-- supression de  
+                    l'espace--><input type="text" id="localisation" name="localisation" required><!-- supression de  
+                    l'espace--><input class="no-mobile" type="submit" value="Rechercher"><!-- supression de  
+                    l'espace--><button class="no-mobile" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    <!-- pas le bon logo pour la loupe -->
+                </div>
+                <div class="filtre">
+                    <p>Filtres</p>
+                    <div>
+                        <input type="checkbox" name="filtre" value="economique" id="economique">
+                        <label for="economique"><i class="fa-solid fa-money-bill-wave"></i>&Eacute;conomique</label>
+                        <input type="checkbox" name="filtre" value="familial" id="familial">
+                        <label for="familial"><i class="fa-solid fa-person"></i>Familial</label>
+                        <input type="checkbox" name="filtre" value="romatique" id="romantique">
+                        <label for="romantique"><i class="fa-solid fa-heart"></i>Romantique</label>
+                        <input type="checkbox" name="filtre" value="animaux" id="animaux">
+                        <label for="animaux"><i class="fa-solid fa-dog"></i>Animaux autorisés</label>
+                    </div>
+                 </div>
+            </form>
+            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            <!-- rajouter le picto avec ::before -->
+        </section>
+        <div class="container1">
+            <!-- flex-grow 2 vs 1 -->
+            <section id="hebergement">
+                <h2>Hébergements à Marseille</h2>
+                <div class="container2">
+                    <div class="card card_1form">
+                        <!-- display:block sur l'image -->
+                        <img class="picture_top" src="" srcset="" alt="">
+                        <!-- vraiment h4? -->
+                        <h4>Auberge La Canebière</h4>
+                        <p>Nuit à partir de 25€</p>
+                        <div class="grade">
+                            <i class="star1 fa-solid fa-star validated"></i>
+                            <i class="star2 fa-solid fa-star validated"></i>
+                            <i class="star3 fa-solid fa-star validated"></i>
+                            <i class="star4 fa-solid fa-star validated"></i>
+                            <i class="star5 fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="card card_1form">
+                        <!-- display:block sur l'image -->
+                        <img class="picture_top" src="" srcset="" alt="">
+                        <!-- vraiment h4? -->
+                        <h4>Hôtel du port</h4>
+                        <p>Nuit à partir de 52€</p>
+                        <div class="grade">
+                            <i class="star1 fa-solid fa-star validated"></i>
+                            <i class="star2 fa-solid fa-star validated"></i>
+                            <i class="star3 fa-solid fa-star validated"></i>
+                            <i class="star4 fa-solid fa-star validated"></i>
+                            <i class="star5 fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="card card_1form">
+                        <!-- display:block sur l'image -->
+                        <img class="picture_top" src="" srcset="" alt="">
+                        <!-- vraiment h4? -->
+                        <h4>Hôtel Les mouettes</h4>
+                        <p>Nuit à partir de 76€</p>
+                        <div class="grade">
+                            <i class="star1 fa-solid fa-star validated"></i>
+                            <i class="star2 fa-solid fa-star validated"></i>
+                            <i class="star3 fa-solid fa-star validated"></i>
+                            <i class="star4 fa-solid fa-star validated"></i>
+                            <i class="star5 fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="card card_1form">
+                        <!-- display:block sur l'image -->
+                        <img class="picture_top" src="" srcset="" alt="">
+                        <!-- vraiment h4? -->
+                        <h4>Hôtel de la mer</h4>
+                        <p>Nuit à partir de 46€</p>
+                        <div class="grade">
+                            <i class="star1 fa-solid fa-star validated"></i>
+                            <i class="star2 fa-solid fa-star validated"></i>
+                            <i class="star3 fa-solid fa-star validated"></i>
+                            <i class="star4 fa-solid fa-star validated"></i>
+                            <i class="star5 fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="card card_1form">
+                        <!-- display:block sur l'image -->
+                        <img class="picture_top" src="" srcset="" alt="">
+                        <!-- vraiment h4? -->
+                        <h4>Auberge Le Panier</h4>
+                        <p>Nuit à partir de 23€</p>
+                        <div class="grade">
+                            <i class="star1 fa-solid fa-star validated"></i>
+                            <i class="star2 fa-solid fa-star validated"></i>
+                            <i class="star3 fa-solid fa-star validated"></i>
+                            <i class="star4 fa-solid fa-star validated"></i>
+                            <i class="star5 fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="card card_1form">
+                        <!-- display:block sur l'image -->
+                        <img class="picture_top" src="" srcset="" alt="">
+                        <!-- vraiment h4? -->
+                        <h4>Hôtel Chez Amina</h4>
+                        <p>Nuit à partir de 96€</p>
+                        <div class="grade">
+                            <i class="star1 fa-solid fa-star validated"></i>
+                            <i class="star2 fa-solid fa-star validated"></i>
+                            <i class="star3 fa-solid fa-star validated"></i>
+                            <i class="star4 fa-solid fa-star validated"></i>
+                            <i class="star5 fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div><a href=#>Afficher plus</a></div>
+            </section>
+            <section>
+                <div>
+                    <!-- ::after est pas plus simple? -->
+                    <div class="container3">  
+                        <h2>Les plus populaires</h2>
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="card card_2form">
+                        <!-- float sur l'image -->
+                        <img class="picture_left" src="" srcset="" alt="">
+                        <!-- vraiment h4? -->
+                        <h4>Hôtel Le soleil du matin</h4>
+                        <p>Nuit à partir de 128€</p>
+                        <div class="grade">
+                            <i class="star1 fa-solid fa-star validated"></i>
+                            <i class="star2 fa-solid fa-star validated"></i>
+                            <i class="star3 fa-solid fa-star validated"></i>
+                            <i class="star4 fa-solid fa-star validated"></i>
+                            <i class="star5 fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <section id="activites">
+
+        </section>
+    </main>
+
+    <footer></footer>
+
+
+    </body>
