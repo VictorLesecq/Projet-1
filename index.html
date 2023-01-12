@@ -3,7 +3,7 @@
 	<head>
 	 	<meta charset="utf-8" />
 	 	<link rel="stylesheet" href="style.css"/>
-         <script src="https://kit.fontawesome.com/a524bcc808.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a524bcc808.js" crossorigin="anonymous"></script>
 		<title>Booki</title>
 	</head>
 
@@ -19,7 +19,7 @@
     </header>
 
     <main>
-        <section>
+        <section id="research">
             <h1>Trouver votre hébergement pour des vacances de rêve</h1>
             <p>En plein centre-ville ou en nature</p>
             <form action="">
@@ -44,7 +44,7 @@
                     </div>
                  </div>
             </form>
-            <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            <p class="result_nb_info">Plus de <span class="result_nb">500</span> logements sont disponibles dans cette ville</p>
             <!-- rajouter le picto avec ::before -->
         </section>
         <div class="container1">
@@ -52,123 +52,220 @@
             <section id="hebergement">
                 <h2>Hébergements à Marseille</h2>
                 <div class="container2">
-                    <div class="card card_1form">
-                        <!-- display:block sur l'image -->
-                        <img class="picture_top" src="" srcset="" alt="">
-                        <!-- vraiment h4? -->
-                        <h4>Auberge La Canebière</h4>
-                        <p>Nuit à partir de 25€</p>
-                        <div class="grade">
-                            <i class="star1 fa-solid fa-star validated"></i>
-                            <i class="star2 fa-solid fa-star validated"></i>
-                            <i class="star3 fa-solid fa-star validated"></i>
-                            <i class="star4 fa-solid fa-star validated"></i>
-                            <i class="star5 fa-solid fa-star"></i>
+                    <a href="#">
+                        <div class="card card_1form">
+                            <!-- display:block sur l'image -->
+                            <img class="picture_top" src="" srcset="" alt="">
+                            <!-- vraiment h4? -->
+                            <h4>Auberge La Canebière</h4>
+                            <p>Nuit à partir de 25€</p>
+                            <div class="grade">
+                                <i class="star1 fa-solid fa-star validated"></i>
+                                <i class="star2 fa-solid fa-star validated"></i>
+                                <i class="star3 fa-solid fa-star validated"></i>
+                                <i class="star4 fa-solid fa-star validated"></i>
+                                <i class="star5 fa-solid fa-star"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card card_1form">
-                        <!-- display:block sur l'image -->
-                        <img class="picture_top" src="" srcset="" alt="">
-                        <!-- vraiment h4? -->
-                        <h4>Hôtel du port</h4>
-                        <p>Nuit à partir de 52€</p>
-                        <div class="grade">
-                            <i class="star1 fa-solid fa-star validated"></i>
-                            <i class="star2 fa-solid fa-star validated"></i>
-                            <i class="star3 fa-solid fa-star validated"></i>
-                            <i class="star4 fa-solid fa-star validated"></i>
-                            <i class="star5 fa-solid fa-star"></i>
+                    </a>
+                    <a href="#">
+                        <div class="card card_1form">
+                            <!-- display:block sur l'image -->
+                            <img class="picture_top" src="" srcset="" alt="">
+                            <!-- vraiment h4? -->
+                            <h4>Hôtel du port</h4>
+                            <p>Nuit à partir de 52€</p>
+                            <div class="grade">
+                                <i class="star1 fa-solid fa-star validated"></i>
+                                <i class="star2 fa-solid fa-star validated"></i>
+                                <i class="star3 fa-solid fa-star validated"></i>
+                                <i class="star4 fa-solid fa-star validated"></i>
+                                <i class="star5 fa-solid fa-star"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card card_1form">
-                        <!-- display:block sur l'image -->
-                        <img class="picture_top" src="" srcset="" alt="">
-                        <!-- vraiment h4? -->
-                        <h4>Hôtel Les mouettes</h4>
-                        <p>Nuit à partir de 76€</p>
-                        <div class="grade">
-                            <i class="star1 fa-solid fa-star validated"></i>
-                            <i class="star2 fa-solid fa-star validated"></i>
-                            <i class="star3 fa-solid fa-star validated"></i>
-                            <i class="star4 fa-solid fa-star validated"></i>
-                            <i class="star5 fa-solid fa-star"></i>
+                    </a>
+                    <a href="#">
+                        <div class="card card_1form">
+                            <!-- display:block sur l'image -->
+                            <img class="picture_top" src="" srcset="" alt="">
+                            <!-- vraiment h4? -->
+                            <h4>Hôtel Les mouettes</h4>
+                            <p>Nuit à partir de 76€</p>
+                            <div class="grade">
+                                <i class="star1 fa-solid fa-star validated"></i>
+                                <i class="star2 fa-solid fa-star validated"></i>
+                                <i class="star3 fa-solid fa-star validated"></i>
+                                <i class="star4 fa-solid fa-star validated"></i>
+                                <i class="star5 fa-solid fa-star"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card card_1form">
-                        <!-- display:block sur l'image -->
-                        <img class="picture_top" src="" srcset="" alt="">
-                        <!-- vraiment h4? -->
-                        <h4>Hôtel de la mer</h4>
-                        <p>Nuit à partir de 46€</p>
-                        <div class="grade">
-                            <i class="star1 fa-solid fa-star validated"></i>
-                            <i class="star2 fa-solid fa-star validated"></i>
-                            <i class="star3 fa-solid fa-star validated"></i>
-                            <i class="star4 fa-solid fa-star validated"></i>
-                            <i class="star5 fa-solid fa-star"></i>
+                    </a>
+                    <a href="#">
+                        <div class="card card_1form">
+                            <!-- display:block sur l'image -->
+                            <img class="picture_top" src="" srcset="" alt="">
+                            <!-- vraiment h4? -->
+                            <h4>Hôtel de la mer</h4>
+                            <p>Nuit à partir de 46€</p>
+                            <div class="grade">
+                                <i class="star1 fa-solid fa-star validated"></i>
+                                <i class="star2 fa-solid fa-star validated"></i>
+                                <i class="star3 fa-solid fa-star validated"></i>
+                                <i class="star4 fa-solid fa-star validated"></i>
+                                <i class="star5 fa-solid fa-star"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card card_1form">
-                        <!-- display:block sur l'image -->
-                        <img class="picture_top" src="" srcset="" alt="">
-                        <!-- vraiment h4? -->
-                        <h4>Auberge Le Panier</h4>
-                        <p>Nuit à partir de 23€</p>
-                        <div class="grade">
-                            <i class="star1 fa-solid fa-star validated"></i>
-                            <i class="star2 fa-solid fa-star validated"></i>
-                            <i class="star3 fa-solid fa-star validated"></i>
-                            <i class="star4 fa-solid fa-star validated"></i>
-                            <i class="star5 fa-solid fa-star"></i>
+                    </a>
+                    <a href="#">  
+                        <div class="card card_1form">
+                            <!-- display:block sur l'image -->
+                            <img class="picture_top" src="" srcset="" alt="">
+                            <!-- vraiment h4? -->
+                            <h4>Auberge Le Panier</h4>
+                            <p>Nuit à partir de 23€</p>
+                            <div class="grade">
+                                <i class="star1 fa-solid fa-star validated"></i>
+                                <i class="star2 fa-solid fa-star validated"></i>
+                                <i class="star3 fa-solid fa-star validated"></i>
+                                <i class="star4 fa-solid fa-star validated"></i>
+                                <i class="star5 fa-solid fa-star"></i>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card card_1form">
-                        <!-- display:block sur l'image -->
-                        <img class="picture_top" src="" srcset="" alt="">
-                        <!-- vraiment h4? -->
-                        <h4>Hôtel Chez Amina</h4>
-                        <p>Nuit à partir de 96€</p>
-                        <div class="grade">
-                            <i class="star1 fa-solid fa-star validated"></i>
-                            <i class="star2 fa-solid fa-star validated"></i>
-                            <i class="star3 fa-solid fa-star validated"></i>
-                            <i class="star4 fa-solid fa-star validated"></i>
-                            <i class="star5 fa-solid fa-star"></i>
+                    </a>
+                    <a href="#">
+                        <div class="card card_1form">
+                            <!-- display:block sur l'image -->
+                            <img class="picture_top" src="" srcset="" alt="">
+                            <!-- vraiment h4? -->
+                            <h4>Hôtel Chez Amina</h4>
+                            <p>Nuit à partir de 96€</p>
+                            <div class="grade">
+                                <i class="star1 fa-solid fa-star validated"></i>
+                                <i class="star2 fa-solid fa-star validated"></i>
+                                <i class="star3 fa-solid fa-star validated"></i>
+                                <i class="star4 fa-solid fa-star validated"></i>
+                                <i class="star5 fa-solid fa-star"></i>
+                            </div>
                         </div>
-                    </div>
+                    </a>  
                 </div>
                 <div><a href=#>Afficher plus</a></div>
             </section>
-            <section>
+            <section> <!-- Aside ?-->
                 <div>
-                    <!-- ::after est pas plus simple? -->
                     <div class="container3">  
-                        <h2>Les plus populaires</h2>
+                        <h2>Les plus populaires</h2><!-- ::after est pas plus simple? -->
                         <i class="fa-solid fa-chart-line"></i>
                     </div>
-                    <div class="card card_2form">
-                        <!-- float sur l'image -->
-                        <img class="picture_left" src="" srcset="" alt="">
-                        <!-- vraiment h4? -->
-                        <h4>Hôtel Le soleil du matin</h4>
-                        <p>Nuit à partir de 128€</p>
-                        <div class="grade">
-                            <i class="star1 fa-solid fa-star validated"></i>
-                            <i class="star2 fa-solid fa-star validated"></i>
-                            <i class="star3 fa-solid fa-star validated"></i>
-                            <i class="star4 fa-solid fa-star validated"></i>
-                            <i class="star5 fa-solid fa-star"></i>
-                        </div>
+                    <div class="container4">
+                        <a href="#">
+                            <div class="card card_2form">
+                                <!-- float sur l'image -->
+                                <img class="picture_left" src="" srcset="" alt="">
+                                <!-- vraiment h4? -->
+                                <h4>Hôtel Le soleil du matin</h4>
+                                <p>Nuit à partir de 128€</p>
+                                <div class="grade">
+                                    <i class="star1 fa-solid fa-star validated"></i>
+                                    <i class="star2 fa-solid fa-star validated"></i>
+                                    <i class="star3 fa-solid fa-star validated"></i>
+                                    <i class="star4 fa-solid fa-star validated"></i>
+                                    <i class="star5 fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="card card_2form">
+                                <!-- float sur l'image -->
+                                <img class="picture_left" src="" srcset="" alt="">
+                                <!-- vraiment h4? -->
+                                <h4>Chambres d’hôtes Au cœur de l’eau</h4>
+                                <p>Nuit à partir de 71€</p>
+                                <div class="grade">
+                                    <i class="star1 fa-solid fa-star validated"></i>
+                                    <i class="star2 fa-solid fa-star validated"></i>
+                                    <i class="star3 fa-solid fa-star validated"></i>
+                                    <i class="star4 fa-solid fa-star validated"></i>
+                                    <i class="star5 fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <div class="card card_2form">
+                                <!-- float sur l'image -->
+                                <img class="picture_left" src="" srcset="" alt="">
+                                <!-- vraiment h4? -->
+                                <h4>Hôtel Bleu et Blanc</h4>
+                                <p>Nuit à partir de 68€</p>
+                                <div class="grade">
+                                    <i class="star1 fa-solid fa-star validated"></i>
+                                    <i class="star2 fa-solid fa-star validated"></i>
+                                    <i class="star3 fa-solid fa-star validated"></i>
+                                    <i class="star4 fa-solid fa-star validated"></i>
+                                    <i class="star5 fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </a> 
                     </div>
                 </div>
             </section>
         </div>
         <section id="activites">
-
+            <h2>Activités à Marseille</h2>
+                <div class="container5">
+                    <a href="#">
+                        <div class="card card_3form">
+                            <!-- display:block sur l'image -->
+                            <img class="picture_top" src="" srcset="" alt="">
+                            <!-- vraiment h4? -->
+                            <h4>Vieux-Port</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card card_3form">
+                            <!-- display:block sur l'image -->
+                            <img class="picture_top" src="" srcset="" alt="">
+                            <!-- vraiment h4? -->
+                            <h4>Fort de Pomègues</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card card_3form">
+                            <!-- display:block sur l'image -->
+                            <img class="picture_top" src="" srcset="" alt="">
+                            <!-- vraiment h4? -->
+                            <h4>Parc national des Calanques</h4>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="card card_3form">
+                            <!-- display:block sur l'image -->
+                            <img class="picture_top" src="" srcset="" alt="">
+                            <!-- vraiment h4? -->
+                            <h4>Notre-Dame-de-la-Garde</h4>
+                        </div>
+                    </a>
         </section>
     </main>
 
-    <footer></footer>
+    <footer>
+        <div>
+            <h3>À propos</h3>
+            <a href="#">Fonctionnement du site</a>
+            <a href="#">Conditions générales</a>
+            <a href="#">Données et confidentialité</a>            
+        </div>
+        <div>
+            <h3>Nos hébergements</h3>
+            <a href="#">Charte qualité</a>
+            <a href="#">Proposer votre hôtel</a>          
+        </div>
+        <div>
+            <h3>Assistance</h3>
+            <a href="#">Centre d’aide</a>
+            <a href="#">Nous contacter</a>          
+        </div>
+    </footer>
 
 
     </body>
