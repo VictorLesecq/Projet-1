@@ -1,0 +1,122 @@
+/*Font configuration*/
+@font-face{
+	font-family: 'raleway';
+	src: url('Font/Raleway/static/Raleway-Regular.ttf');
+	font-weight: normal;
+    font-style: normal;	
+}
+
+/*Global configuration*/
+*{
+    margin:0;
+    padding:0;
+	box-sizing:border-box;
+}
+:root{
+	--color-primary: rgba(0, 101, 252, 1);
+    --color-primary-light: rgba(222, 235, 255, 1);
+    --color-secondary: rgba(217, 217, 217, 1);
+    font-family:raleway;
+}
+.global_container{
+    max-width: 1400px;
+    padding-left:50px;
+    padding-right:50px;
+}
+
+/*Header configuration*/
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    padding:21px 0 23px;
+}
+nav{
+    height:100%;
+}
+ul{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+li{
+    list-style-type: none;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    border-top: 2px solid transparent;
+}
+li:hover{
+    border-top-color: var(--color-primary);
+    cursor:pointer;
+}
+.lien_nav{
+    padding-right: 34px;
+    padding-left: 34px;
+    text-decoration: none;
+    color:black;
+    line-height:100px;
+}
+li:hover .lien_nav{
+    color:var(--color-primary);
+}
+
+/*Tablet configuration*/
+@media  screen and (max-width:992px){
+    
+    /*global configuration*/
+    body{
+        background-color: blue;
+    }
+    .global_container{
+        max-width: 1400px;
+        padding-left:72px;
+        padding-right:72px;
+    }
+}
+
+/*Mobile configuration*/
+@media  screen and (max-width:768px){
+    
+    /*global configuration*/
+    body{
+        background-color: red;
+    }
+    .global_container{
+        max-width: 1400px;
+        padding:0px;
+    }
+
+    /*Header configuration*/    
+    header{
+        flex-direction: column;
+    }
+    nav{
+        width:100%;
+    }
+    li{
+        border-top: 0px;
+        border-bottom: 3px solid var(--color-secondary);
+        width:50%;
+        justify-content: center;
+    }
+    li:active{
+        border-bottom-color:var(--color-primary);
+    }
+    li:hover{
+        border-top:none;
+    }
+    .lien_nav{
+        line-height:60px;
+    }
+    li:hover .lien_nav{
+        color:black;
+    }
+    li:active .lien_nav{
+        color:var(--color-primary);
+    }
+    
+    }
