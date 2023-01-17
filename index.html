@@ -26,18 +26,17 @@
     <main>
         <section id="research">
             <h1>Trouver votre hébergement pour des vacances de rêve</h1>
-            <p>En plein centre-ville ou en nature</p>
+            <p>En plein centre-ville ou en pleine nature</p>
             <form action="">
-                <div class="recherche">
-                    <label for="localisation"><i class="fa-solid fa-location-dot"></i></label><!-- supression de  
-                    l'espace--><input type="text" id="localisation" name="localisation" required><!-- supression de  
-                    l'espace--><input class="no-mobile" type="submit" value="Rechercher"><!-- supression de  
-                    l'espace--><button class="no-mobile" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-                    <!-- pas le bon logo pour la loupe -->
+                <div class="research">
+                    <label class="localisation" for="localisation"><i class="fa-solid fa-location-dot"></i></label><!-- supression de  
+                    l'espace--><input type="text" id="localisation" name="localisation" placeholder="Marseille, France" required><!-- supression de  
+                    l'espace--><button class="no-mobile" type="submit">Rechercher</button><!-- supression de  
+                    l'espace--><button class="mobile" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
                 </div>
                 <div class="filtre">
                     <p>Filtres</p>
-                    <div>
+                    <div class="filtres">
                         <input type="checkbox" name="filtre" value="economique" id="economique">
                         <label for="economique"><i class="fa-solid fa-money-bill-wave"></i>&Eacute;conomique</label>
                         <input type="checkbox" name="filtre" value="familial" id="familial">
@@ -49,8 +48,11 @@
                     </div>
                  </div>
             </form>
-            <p class="result_nb_info">Plus de <span class="result_nb">500</span> logements sont disponibles dans cette ville</p>
-            <!-- rajouter le picto avec ::before -->
+            <div class="result_nb_info">
+                <i class="fa-solid fa-info"></i>
+                <p>Plus de <span class="result_nb">500</span> logements sont disponibles dans cette ville</p>
+            </div>
+            <!-- <p class="result_nb_info">Plus de <span class="result_nb">500</span> logements sont disponibles dans cette ville</p> -->
         </section>
         <section class="container1">
             <article id="hebergement">
@@ -287,19 +289,19 @@
     <footer>
         <div>
             <h3>À propos</h3>
-            <a href="#">Fonctionnement du site</a>
-            <a href="#">Conditions générales</a>
-            <a href="#">Données et confidentialité</a>            
+            <a class="footer_link" href="#">Fonctionnement du site</a>
+            <a class="footer_link" href="#">Conditions générales</a>
+            <a class="footer_link" href="#">Données et confidentialité</a>            
         </div>
         <div>
             <h3>Nos hébergements</h3>
-            <a href="#">Charte qualité</a>
-            <a href="#">Proposer votre hôtel</a>          
+            <a class="footer_link" href="#">Charte qualité</a>
+            <a class="footer_link" href="#">Proposer votre hôtel</a>          
         </div>
         <div>
             <h3>Assistance</h3>
-            <a href="#">Centre d’aide</a>
-            <a href="#">Nous contacter</a>          
+            <a class="footer_link" href="#">Centre d’aide</a>
+            <a class="footer_link" href="#">Nous contacter</a>          
         </div>
     </footer>
 

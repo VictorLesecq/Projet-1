@@ -22,6 +22,7 @@
     max-width: 1400px;
     padding-left:50px;
     padding-right:50px;
+    margin:auto;
 }
 
 /*Header configuration*/
@@ -34,18 +35,14 @@ header{
 .logo{
     padding:21px 0 23px;
 }
-nav{
-    height:100%;
-}
+
 ul{
     display: flex;
     align-items: center;
-    height: 100%;
 }
 li{
     list-style-type: none;
     display: flex;
-    height: 100%;
     align-items: center;
     border-top: 2px solid transparent;
 }
@@ -64,6 +61,157 @@ li:hover .lien_nav{
     color:var(--color-primary);
 }
 
+/*1st section configuration*/
+h1{
+    margin-top:26px;
+    margin-bottom:8px;
+}
+form{
+    margin-top:20px;
+    margin-bottom:38px;
+}
+.research{
+    display: flex;
+    height:49px;
+    margin-bottom:31px;
+    font-size:1.125em;
+}
+.localisation{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:50px;
+    border-radius: 15px 0px 0px 15px;
+    background-color: var(--color-secondary);
+}
+#localisation{
+    padding-left: 17px;
+    border:0px;
+    border-top:1px solid var(--color-secondary);
+    border-bottom:1px solid var(--color-secondary);
+    outline: none;
+    font-size: 1em;
+    font-family: raleway;
+    font-weight: 700;
+}
+button{
+    padding-left: 16px;
+    padding-right:16px;
+    border:0;
+    border-radius: 0px 15px 15px 0px;
+    background-color:var(--color-primary);
+    cursor:pointer;
+    font-size: 1em;
+    font-family: raleway;
+    font-weight: 700;
+    color:white;
+}
+.mobile{
+    display:none;
+}
+
+.filtre{
+    display:flex;
+}
+.filtre p{
+    line-height:50px;
+    margin-left:12px;
+    margin-right:50px;
+    font-weight: 700;;
+}
+.filtres{
+    display: flex;
+    gap:20px;
+}
+input[type="checkbox"]{
+    display:none;
+}
+.filtre label{
+    display: inline-block;
+    min-width: 55px;
+    padding: 14.58px;
+    border:2px solid var(--color-secondary);
+    border-radius:25px;
+    cursor:pointer;
+    font-size: 17px;
+}
+.filtre label:hover{
+    background-color:var(--color-primary-light);
+}
+.filtre i{
+    padding-right:10px;
+    color:var(--color-primary);
+}
+.result_nb_info{
+    display:flex;
+    gap:11px;
+}
+.fa-info{
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -2px;
+    width: 24px;
+    height:24px;
+    border: 1px solid var(--color-secondary);
+    border-radius: 50%;
+    font-size: 10px;
+    color: var(--color-primary);
+}
+/* .result_nb_info::before{
+    content: '\f129';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    border: 1px solid var(--color-secondary);
+    border-radius: 50%;
+    width: 22.4px;
+    display: inline-flex;
+    height:22.4px;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    position: relative;
+    top: -2px;
+    margin-right: 11px;
+    color: var(--color-primary);
+} */
+
+
+
+
+/*Apres*/
+h2{margin-top:50px;}
+
+/*Footer configuration*/
+footer{
+    display:flex;
+    padding:45px;
+    padding-bottom:60px;
+    /* justify-content: space-between; */
+    margin-top:60px;
+    background-color: var(--color-secondary);
+}
+footer div{
+}
+footer h3{
+    padding-bottom:20px;
+    font-size:1.125em;
+}
+.footer_link{
+    display:block;
+    padding-top: 12px;
+    text-decoration: none;
+    color:black;
+}
+.footer_link:hover{
+    text-decoration: underline;
+}
+
+
+
+
 /*Tablet configuration*/
 @media  screen and (max-width:992px){
     
@@ -76,6 +224,13 @@ li:hover .lien_nav{
         padding-left:72px;
         padding-right:72px;
     }
+
+    /*1st section configuration*/
+    .filtres{
+        justify-content: space-between;
+        gap:0px;
+        width:100%;
+    }
 }
 
 /*Mobile configuration*/
@@ -86,7 +241,6 @@ li:hover .lien_nav{
         background-color: red;
     }
     .global_container{
-        max-width: 1400px;
         padding:0px;
     }
 
@@ -118,5 +272,48 @@ li:hover .lien_nav{
     li:active .lien_nav{
         color:var(--color-primary);
     }
-    
+
+    /*1st section configuration*/
+    #research{
+        padding-left:20px;
+        padding-right:20px;
     }
+    h1{
+        margin-top:31px;
+        margin-bottom:13px;
+        font-size: 1.375em;
+    }
+    form{
+        margin-top:36px;
+        margin-bottom:43px;
+    }
+    .no-mobile{
+        display:none;
+    }
+    .mobile{
+        display:inline;
+    }
+    .filtre{
+        display:block;
+    }
+    .filtres{
+        flex-wrap: wrap;
+        gap:10%;
+    }
+    .filtre label{
+        width:45%;
+        margin-bottom:17px;
+        font-size: 11px;
+    }
+
+    /*Footer configuration*/
+    footer{  
+        display: block;
+        margin-top: 80px;
+        padding: 45px;
+    }
+    footer div{
+        padding-top:45px;
+        padding-left:30px
+    }
+}
