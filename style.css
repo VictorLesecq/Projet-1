@@ -62,8 +62,11 @@ li:hover .lien_nav{
 }
 
 /*1st section configuration*/
-h1{
+#research{
+    margin-bottom:40px;
     margin-top:26px;
+}
+h1{
     margin-bottom:8px;
 }
 form{
@@ -112,6 +115,7 @@ button{
 
 .filtre{
     display:flex;
+    flex-wrap: wrap;
 }
 .filtre p{
     line-height:50px;
@@ -122,6 +126,7 @@ button{
 .filtres{
     display: flex;
     gap:20px;
+    flex:1;
 }
 input[type="checkbox"]{
     display:none;
@@ -133,7 +138,8 @@ input[type="checkbox"]{
     border:2px solid var(--color-secondary);
     border-radius:25px;
     cursor:pointer;
-    font-size: 17px;
+    font-size: 1.0625em;
+    white-space:nowrap;
 }
 .filtre label:hover{
     background-color:var(--color-primary-light);
@@ -147,8 +153,7 @@ input[type="checkbox"]{
     gap:11px;
 }
 .fa-info{
-    display: flex;
-    flex-shrink: 0;
+    display: flex !important;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -178,22 +183,168 @@ input[type="checkbox"]{
     color: var(--color-primary);
 } */
 
+/*2nd section configuration*/
+.container1{
+    display:flex;
+    gap:40px;
+}
+#hebergement, .populaire{
+    background-color:var(--color-secondary);
+    border-radius:20px;
+}
+#hebergement{
+    flex:2;
+    padding:40px;
+}
+.populaire{
+    flex:1;    
+    padding:40px;
+}
+h2{
+    margin-bottom:23px;
+}
+.card_container{
+    display:flex;
+}
+.container2{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.container4{
+    flex-direction: column;
+}
+.card_container a{
+    text-decoration: none;
+    margin-bottom:20px;
+}
+.container2 a{
+    /* height: 200px; */
+    width: 30%;
+    /* min-width: 210px;  */
+}
+.container4 a{
+    width: 100%;
+    height: 150px;
+}
+.card{
+    border-radius: 20px;
+    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    color: black;
+    height: 100%;
+}
+.card_form1{   
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+.picture{
+    object-fit: cover;
+}
+.card_form1 .picture{
+    /* height: 62.5%; */
+    height:120px;
+    /* max-height: 120px; */
+}
+.picture_top{
+    border-radius: 20px 20px 0 0;
+}
+.picture_left {
+    float: left;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px 0 0 20px;
+}
+.card_info{
+    padding-inline: 15px;
+    padding-top: 12px;
+}
+.card_info :nth-child(n){
+    margin-bottom: 9px;
+}
+.card_form2_info{
+    padding-top: 15px;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card p{
+    font-size:0.875em;
+}
+.grade{
+    display: flex;
+    justify-content: flex-start;
+    gap: 4px;
+}
+.fa-star{
+    font-size:12px;
+    color:var(--color-secondary);
+}
+.validated{
+    color:var(--color-primary);
+}
+.more_info{
+    margin-top:20px;
+}
+.more_info a{
+    text-decoration: none;
+    color:black;
+}
+.more_info a:hover{
+    text-decoration: underline;
+}
+
+    /*in order to center the chart picto with position:absloute*/
+    .container3{
+        position:relative;
+    }
+    .fa-chart-line{
+        font-size:16px;
+        color:var(--color-primary);
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+ 
+/*3nd section configuration*/
+#activites{
+    margin-top:60px;
+}
+.container5{
+    display:flex;
+    justify-content: space-between;
+}
+.container5 a{
+    width:23%;
+}
+.card_form3{
+    display:flex;
+    flex-direction: column;
+}
+.card_form3 .picture{
+    flex:8;
+}
+.card_form3 .card_info{
+    flex:1;
+    padding-block:12px;
+}
 
 
 
-/*Apres*/
-h2{margin-top:50px;}
+
+
 
 /*Footer configuration*/
 footer{
     display:flex;
+    /* justify-content: space-between; */
+    gap:11%;
     padding:45px;
     padding-bottom:60px;
-    /* justify-content: space-between; */
     margin-top:60px;
     background-color: var(--color-secondary);
-}
-footer div{
 }
 footer h3{
     padding-bottom:20px;
@@ -203,7 +354,7 @@ footer h3{
     display:block;
     padding-top: 12px;
     text-decoration: none;
-    color:black;
+    color:rgb(50, 33, 33);
 }
 .footer_link:hover{
     text-decoration: underline;
@@ -229,7 +380,23 @@ footer h3{
     .filtres{
         justify-content: space-between;
         gap:0px;
-        width:100%;
+    }
+    /*2nd section configuration*/
+    .container1{
+        flex-direction: column;
+        gap: 53px; 
+    }
+    .container4{
+        flex-direction: row;
+        gap:5%;
+    }
+    .container4 a{
+        width:30%;
+    }
+
+    /*3nd section configuration*/
+    #activites{
+        margin-top:70px;
     }
 }
 
@@ -304,6 +471,35 @@ footer h3{
         width:45%;
         margin-bottom:17px;
         font-size: 11px;
+    }
+
+    /*2nd section configuration*/
+    .card_container{
+        flex-direction: column;
+    }
+    .container1{
+        gap:0;
+    }
+    .container2 a{
+        width:100%;
+    }
+    .container4 a{
+        width:100%;
+        margin-bottom: 10px;
+    }
+    .populaire{
+        order:0;
+        border-radius:0;
+        padding:21px;
+    }
+    #hebergement{
+        order:1;
+        background: transparent;
+    }
+
+    /*3nd section configuration*/
+    #activites {
+        margin-top: 105px;
     }
 
     /*Footer configuration*/
