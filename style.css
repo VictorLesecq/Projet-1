@@ -59,7 +59,7 @@ li:hover .lien_nav{
 }
 
 /*1st section configuration*/
-#research{
+#form{
     margin-bottom:40px;
     margin-top:25px;
 }
@@ -71,7 +71,7 @@ form{
     margin-bottom:38px;
 }
 .research{
-    display: flex;
+    display: flex; /*To use the default properties of flex-box*/
     height:49px;
     margin-bottom:31px;
     font-size:1.125em;
@@ -95,8 +95,7 @@ form{
     font-weight: 700;
 }
 button{
-    padding-left: 16px;
-    padding-right:16px;
+    padding-inline: 16px;
     border:0;
     border-radius: 0px 15px 15px 0px;
     background-color:var(--color-primary);
@@ -109,12 +108,12 @@ button{
 .mobile{
     display:none;
 }
-
 .filtre{
     display:flex;
 }
 .filtre p{
     line-height:50px;
+    /*instead of align-items on .filtre to have the p on the top line when the label input wrap*/
     margin-left:12px;
     margin-right:50px;
     font-weight: 700;;
@@ -123,7 +122,6 @@ button{
     display: flex;    
     flex-wrap: wrap;
     gap:20px;
-    flex:1;
 }
 input[type="checkbox"]{
     display:none;
@@ -158,7 +156,7 @@ input[type="checkbox"]{
     height:24px;
     border: 1px solid var(--color-secondary-dark);
     border-radius: 50%;
-    font-size: 10px;
+    font-size: 0.625em;
     color: var(--color-primary);
 }
 
@@ -171,100 +169,29 @@ input[type="checkbox"]{
     background-color:var(--color-secondary);
     border-radius:20px;
 }
-#hebergement{
-    flex:2;
-    padding:40px;
-}
-.populaire{
-    flex:1;    
-    padding:40px;
-}
 h2{
     margin-bottom:23px;
 }
 .card_container{
     display:flex;
 }
-.container2{
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.container4{
-    flex-direction: column;
-}
 .card_container a{
     text-decoration: none;
     margin-bottom:20px;
 }
+
+#hebergement{
+    flex:2;
+    padding:40px;
+}
+.container2{
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .container2 a{
     width: 30%;
 }
-.container4 a{
-    width: 100%;
-}
-.card{
-    display: flex;
-    border-radius: 20px;
-    box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
-    background-color: white;
-    color: black;
-    height: 100%;
-}
-.card_form1{
-    flex-direction: column;
-}
-.picture{
-    object-fit: cover;
-}
-.card_form1 .picture{
-    height:120px;
-}
-.picture_top{
-    border-radius: 20px 20px 0 0;
-}
-.picture_left {
-    width: 40%;
-    border-radius: 20px 0 0 20px;
-    flex:4;
-    height:150px;
-}
-.card_info{
-    padding-inline: 15px;
-    padding-block: 4px 11px;
-    flex:1;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-/* .card_info :nth-child(n){
-    margin-bottom: 9px;
-} */
-.card_form2{
-    flex-direction: row;
-}
-.card_form2_info{
-    flex:5;
-    padding-bottom: 12px;
-    padding-top: 16px;
-}
-.card p{
-    font-size:0.875em;
-}
-.card p,.card h4{
-    margin-bottom:9px;
-}
-.grade{
-    display: flex;
-    justify-content: flex-start;
-    gap: 4px;
-}
-.fa-star{
-    font-size:12px;
-    color:var(--color-secondary);
-}
-.validated{
-    color:var(--color-primary);
-}
+
 .more_info{
     margin-top:20px;
 }
@@ -276,7 +203,11 @@ h2{
     text-decoration: underline;
 }
 
-    
+
+.populaire{
+    flex:1;    
+    padding:40px;
+}    
 .container3 h2{
     display:flex;
     justify-content: space-between;   
@@ -284,29 +215,95 @@ h2{
     flex-wrap: wrap; 
 }
 .fa-chart-line{
-    font-size:16px;
+    font-size:1em;
     color:var(--color-primary);
 }
+.container4{
+    flex-direction: column;
+}
+.container4 a{
+    width: 100%;
+}
+
+    /*Card configuration*/
+    .card{
+        display: flex;
+        height: 100%;
+        border-radius: 20px;
+        box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        color: black;
+    }
+    .card_form1,.card_form3{
+        flex-direction: column;
+    }
+    .card_form2{
+        flex-direction: row;
+    }
+    .card_info{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex:1;  
+        padding-inline: 15px;
+        padding-block: 4px 11px;      
+    }
+    .card_form2_info{
+        padding-bottom: 12px;
+        padding-top: 16px;
+    }
+    .card_form3_info{
+        padding-block:12px;
+    }
+    .card p{
+        font-size:0.875em;
+    }
+    .card p,.card h4{
+        margin-bottom:9px;
+    }
+    .grade{
+        display: flex;
+        justify-content: flex-start;
+        gap: 4px;
+    }
+    .fa-star{
+        font-size:0.75em;
+        color:var(--color-secondary);
+    }
+    .validated{
+        color:var(--color-primary);
+    }
+        /*picture card configuration*/
+    .picture{
+        object-fit: cover;
+    }
+    .picture_top{
+        border-radius: 20px 20px 0 0;
+    }
+    .picture_left{
+        border-radius: 20px 0 0 20px;
+    }
+    
+    .card_form1 .picture{
+        height:120px;
+    }
+    .card_form2 .picture {
+        width: 40%;
+        height:150px;
+    }
+    .card_form3 .picture{
+        height:390px;
+    }
  
 /*3nd section configuration*/
 #activites{
     margin-top:60px;
 }
 .container5{
-    display:flex;
     justify-content: space-between;
 }
 .container5 a{
     width:23%;
-}
-.card_form3{
-    flex-direction: column;
-}
-.card_form3 .picture{
-    height:390px;
-}
-.card_form3 .card_info{
-    padding-block:12px;
 }
 
 /*Footer configuration*/
@@ -329,13 +326,11 @@ footer h3{
     display:block;
     padding-top: 12px;
     text-decoration: none;
-    color:rgb(50, 33, 33);
+    color:black
 }
 .footer_link:hover{
     text-decoration: underline;
 }
-
-
 
 
 /*Tablet configuration*/
@@ -361,20 +356,23 @@ footer h3{
     .container4 a{
         width:32%;
     }
-    .picture_left{
-        height:auto;
-    }
-    .card_form2_info{
-        padding-inline: 10px;
-        padding-block: 12px;
-        font-size: 0.875em;
-    }
+
+    /*card specification on tablet*/
+        .picture_left{
+            height:auto;
+        }
+        .card_form2_info{
+            padding-inline: 10px;
+            padding-block: 12px;
+            font-size: 0.875em;
+        }
+        .card_form3 .picture{
+            height:210px;
+        }    
+
     /*Tablet 3nd section configuration*/
     #activites{
         margin-top:70px;
-    }
-    .card_form3 .picture{
-        height:210px;
     }
 }
 
@@ -400,26 +398,19 @@ footer h3{
         border-top: 0px;
         border-bottom: 3px solid var(--color-secondary);
         width:50%;
-        justify-content: center;
     }
-    li:active{
+    li:active,li:hover{
         border-bottom-color:var(--color-primary);
-    }
-    li:hover{
-        border-top:none;
     }
     .lien_nav{
         padding-block:21px;
     }
-    li:hover .lien_nav{
-        color:black;
-    }
-    li:active .lien_nav{
+    :is(li:active,li:hover) .lien_nav{
         color:var(--color-primary);
     }
 
     /*Mobile 1st section configuration*/
-    #research{
+    #form{
         padding-inline:20px;
     }
     h1{
@@ -447,35 +438,39 @@ footer h3{
     .filtre label{
         width:45%;
         margin-bottom:17px;
-        font-size: 11px;
+        font-size: 0.6875em;
     }
 
     /*Mobile 2nd section configuration*/
-    .card_container{
-        flex-direction: column;
-    }
     .container1{
         gap:0;
     }
-    .container2 a{
-        width:100%;
-    }
-    .container4 a{
-        width:100%;
-        margin-bottom: 10px;
+    #hebergement{
+        order:1;
+        background: transparent;
+        padding:20px;
     }
     .populaire{
         order:0;
         border-radius:0;
         padding:20px;
     }
-    .picture_left{
+    .card_container{
+        flex-direction: column;
+    }    
+    :is(.container2,.container4,.container5) a{
+        width:100%;
+    }
+    .container4 a{
+        margin-bottom: 10px;
+    }
+
+    /*card specification for mobile*/
+    .card_form2 picture{
         height:150px;
     }
-    #hebergement{
-        order:1;
-        background: transparent;
-        padding:20px;
+    .card_form3 .picture{
+        height:130px;
     }
 
     /*Mobile 3nd section configuration*/
@@ -483,13 +478,7 @@ footer h3{
         margin-top: 105px;
         padding:20px;
     }
-    .container5 a{
-        width:100%;
-    }
-    .container5 .picture{
-        height:130px;
-    }
-
+    
     /*Mobile Footer configuration*/
     footer{  
         display: block;
