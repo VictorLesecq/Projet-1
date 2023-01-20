@@ -13,37 +13,33 @@
 	box-sizing:border-box;
 }
 :root{
-	--color-primary: rgba(0, 101, 252, 1);
-    --color-primary-light: rgba(222, 235, 255, 1);
-    --color-secondary: rgba(217, 217, 217, 1);
+	--color-primary: #0065FC;
+    --color-primary-light: #DEEBFF;
+    --color-secondary:#F2F2F2;
+    --color-secondary-dark:#D9D9D9;
     font-family:raleway;
 }
 .global_container{
     max-width: 1400px;
-    padding-left:50px;
-    padding-right:50px;
+    padding-inline:50px;
     margin:auto;
 }
 
 /*Header configuration*/
-
 header{
     display:flex;
     justify-content: space-between;
     align-items: center;
 }
 .logo{
-    padding:21px 0 23px;
+    padding-block:21px;
 }
-
 ul{
     display: flex;
     align-items: center;
 }
 li{
     list-style-type: none;
-    display: flex;
-    align-items: center;
     border-top: 2px solid transparent;
 }
 li:hover{
@@ -51,11 +47,12 @@ li:hover{
     cursor:pointer;
 }
 .lien_nav{
-    padding-right: 34px;
-    padding-left: 34px;
+    display: block;
+    padding-block: 40px;
+    padding-inline: 34px;
     text-decoration: none;
+    text-align: center;
     color:black;
-    line-height:100px;
 }
 li:hover .lien_nav{
     color:var(--color-primary);
@@ -64,10 +61,10 @@ li:hover .lien_nav{
 /*1st section configuration*/
 #research{
     margin-bottom:40px;
-    margin-top:26px;
+    margin-top:25px;
 }
 h1{
-    margin-bottom:8px;
+    margin-bottom:13px;
 }
 form{
     margin-top:20px;
@@ -115,7 +112,6 @@ button{
 
 .filtre{
     display:flex;
-    flex-wrap: wrap;
 }
 .filtre p{
     line-height:50px;
@@ -124,7 +120,8 @@ button{
     font-weight: 700;;
 }
 .filtres{
-    display: flex;
+    display: flex;    
+    flex-wrap: wrap;
     gap:20px;
     flex:1;
 }
@@ -132,10 +129,8 @@ input[type="checkbox"]{
     display:none;
 }
 .filtre label{
-    display: inline-block;
-    min-width: 55px;
     padding: 14.58px;
-    border:2px solid var(--color-secondary);
+    border:2px solid var(--color-secondary-dark);
     border-radius:25px;
     cursor:pointer;
     font-size: 1.0625em;
@@ -156,32 +151,16 @@ input[type="checkbox"]{
     display: flex !important;
     justify-content: center;
     align-items: center;
+    flex-shrink: 0;
     position: relative;
     top: -2px;
     width: 24px;
     height:24px;
-    border: 1px solid var(--color-secondary);
+    border: 1px solid var(--color-secondary-dark);
     border-radius: 50%;
     font-size: 10px;
     color: var(--color-primary);
 }
-/* .result_nb_info::before{
-    content: '\f129';
-    font-family: 'Font Awesome\ 5 Free';
-    font-weight: 900;
-    border: 1px solid var(--color-secondary);
-    border-radius: 50%;
-    width: 22.4px;
-    display: inline-flex;
-    height:22.4px;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    position: relative;
-    top: -2px;
-    margin-right: 11px;
-    color: var(--color-primary);
-} */
 
 /*2nd section configuration*/
 .container1{
@@ -218,59 +197,61 @@ h2{
     margin-bottom:20px;
 }
 .container2 a{
-    /* height: 200px; */
     width: 30%;
-    /* min-width: 210px;  */
 }
 .container4 a{
     width: 100%;
-    height: 150px;
 }
 .card{
+    display: flex;
     border-radius: 20px;
     box-shadow: 0px 3px 15px 0px rgba(0, 0, 0, 0.1);
     background-color: white;
     color: black;
     height: 100%;
 }
-.card_form1{   
-    display: flex;
+.card_form1{
     flex-direction: column;
-    /* justify-content: space-between; */
 }
 .picture{
     object-fit: cover;
 }
 .card_form1 .picture{
-    /* height: 62.5%; */
     height:120px;
-    /* max-height: 120px; */
 }
 .picture_top{
     border-radius: 20px 20px 0 0;
 }
 .picture_left {
-    float: left;
     width: 40%;
-    height: 100%;
     border-radius: 20px 0 0 20px;
+    flex:4;
+    height:150px;
 }
 .card_info{
     padding-inline: 15px;
-    padding-top: 12px;
-}
-.card_info :nth-child(n){
-    margin-bottom: 9px;
-}
-.card_form2_info{
-    padding-top: 15px;
-    height:100%;
+    padding-block: 4px 11px;
+    flex:1;
     display:flex;
     flex-direction: column;
     justify-content: space-between;
 }
+/* .card_info :nth-child(n){
+    margin-bottom: 9px;
+} */
+.card_form2{
+    flex-direction: row;
+}
+.card_form2_info{
+    flex:5;
+    padding-bottom: 12px;
+    padding-top: 16px;
+}
 .card p{
     font-size:0.875em;
+}
+.card p,.card h4{
+    margin-bottom:9px;
 }
 .grade{
     display: flex;
@@ -295,18 +276,17 @@ h2{
     text-decoration: underline;
 }
 
-    /*in order to center the chart picto with position:absloute*/
-    .container3{
-        position:relative;
-    }
-    .fa-chart-line{
-        font-size:16px;
-        color:var(--color-primary);
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+    
+.container3 h2{
+    display:flex;
+    justify-content: space-between;   
+    align-items: center;
+    flex-wrap: wrap; 
+}
+.fa-chart-line{
+    font-size:16px;
+    color:var(--color-primary);
+}
  
 /*3nd section configuration*/
 #activites{
@@ -320,31 +300,26 @@ h2{
     width:23%;
 }
 .card_form3{
-    display:flex;
     flex-direction: column;
 }
 .card_form3 .picture{
-    flex:8;
+    height:390px;
 }
 .card_form3 .card_info{
-    flex:1;
     padding-block:12px;
 }
-
-
-
-
-
 
 /*Footer configuration*/
 footer{
     display:flex;
-    /* justify-content: space-between; */
-    gap:11%;
+    justify-content: space-between;
     padding:45px;
     padding-bottom:60px;
     margin-top:60px;
     background-color: var(--color-secondary);
+}
+footer div{
+    width:30%;
 }
 footer h3{
     padding-bottom:20px;
@@ -367,36 +342,39 @@ footer h3{
 @media  screen and (max-width:992px){
     
     /*global configuration*/
-    body{
-        background-color: blue;
-    }
+
     .global_container{
         max-width: 1400px;
         padding-left:72px;
         padding-right:72px;
     }
-
-    /*1st section configuration*/
-    .filtres{
-        justify-content: space-between;
-        gap:0px;
-    }
-    /*2nd section configuration*/
+    
+    /*Tablet 2nd section configuration*/
     .container1{
         flex-direction: column;
         gap: 53px; 
     }
     .container4{
         flex-direction: row;
-        gap:5%;
+        justify-content: space-between;
     }
     .container4 a{
-        width:30%;
+        width:32%;
     }
-
-    /*3nd section configuration*/
+    .picture_left{
+        height:auto;
+    }
+    .card_form2_info{
+        padding-inline: 10px;
+        padding-block: 12px;
+        font-size: 0.875em;
+    }
+    /*Tablet 3nd section configuration*/
     #activites{
         margin-top:70px;
+    }
+    .card_form3 .picture{
+        height:210px;
     }
 }
 
@@ -411,7 +389,7 @@ footer h3{
         padding:0px;
     }
 
-    /*Header configuration*/    
+    /*Mobile Header configuration*/    
     header{
         flex-direction: column;
     }
@@ -431,7 +409,7 @@ footer h3{
         border-top:none;
     }
     .lien_nav{
-        line-height:60px;
+        padding-block:21px;
     }
     li:hover .lien_nav{
         color:black;
@@ -440,10 +418,9 @@ footer h3{
         color:var(--color-primary);
     }
 
-    /*1st section configuration*/
+    /*Mobile 1st section configuration*/
     #research{
-        padding-left:20px;
-        padding-right:20px;
+        padding-inline:20px;
     }
     h1{
         margin-top:31px;
@@ -473,7 +450,7 @@ footer h3{
         font-size: 11px;
     }
 
-    /*2nd section configuration*/
+    /*Mobile 2nd section configuration*/
     .card_container{
         flex-direction: column;
     }
@@ -490,26 +467,38 @@ footer h3{
     .populaire{
         order:0;
         border-radius:0;
-        padding:21px;
+        padding:20px;
+    }
+    .picture_left{
+        height:150px;
     }
     #hebergement{
         order:1;
         background: transparent;
+        padding:20px;
     }
 
-    /*3nd section configuration*/
+    /*Mobile 3nd section configuration*/
     #activites {
         margin-top: 105px;
+        padding:20px;
+    }
+    .container5 a{
+        width:100%;
+    }
+    .container5 .picture{
+        height:130px;
     }
 
-    /*Footer configuration*/
+    /*Mobile Footer configuration*/
     footer{  
         display: block;
         margin-top: 80px;
-        padding: 45px;
+        padding-block: 45px;
+        padding-inline: 30px;
     }
     footer div{
         padding-top:45px;
-        padding-left:30px
+        width:auto;
     }
 }
