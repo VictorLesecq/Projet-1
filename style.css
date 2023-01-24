@@ -34,6 +34,10 @@ header{
 .logo{
     padding-block:21px;
 }
+.logo_image{
+    height:19px;
+    width:61px;
+}
 ul{
     display: flex;
     align-items: center;
@@ -239,6 +243,10 @@ h2{
     }
     .card_form2{
         flex-direction: row;
+        min-height:150px;
+    }
+    .card_form2 picture {
+        width: 40%;
     }
     .card_info{
         display:flex;
@@ -276,6 +284,7 @@ h2{
         /*picture card configuration*/
     .picture{
         object-fit: cover;
+        width:100%;
     }
     .picture_top{
         border-radius: 20px 20px 0 0;
@@ -283,13 +292,17 @@ h2{
     .picture_left{
         border-radius: 20px 0 0 20px;
     }
-    
+    .card_photo{
+        width:40%;
+        border-radius:20px 0 0 20px;
+        background-size: cover;;
+    }
     .card_form1 .picture{
         height:120px;
     }
     .card_form2 .picture {
-        width: 40%;
-        height:150px;
+        height:100%;
+        aspect-ratio: 1/1;
     }
     .card_form3 .picture{
         height:390px;
@@ -464,7 +477,7 @@ footer h3{
 
     /*card specification for mobile*/
     .card_form2 picture{
-        height:150px;
+        flex-basis: 150px;
     }
     .card_form3 .picture{
         height:130px;
