@@ -40,7 +40,6 @@ header{
 }
 ul{
     display: flex;
-    align-items: center;
 }
 li{
     list-style-type: none;
@@ -76,7 +75,7 @@ form{
 }
 .research{
     display: flex; /*To use the default properties of flex-box*/
-    height:49px;
+    min-height:49px;
     margin-bottom:31px;
     font-size:1.125em;
 }
@@ -292,11 +291,6 @@ h2{
     .picture_left{
         border-radius: 20px 0 0 20px;
     }
-    .card_photo{
-        width:40%;
-        border-radius:20px 0 0 20px;
-        background-size: cover;;
-    }
     .card_form1 .picture{
         height:120px;
     }
@@ -371,9 +365,6 @@ footer h3{
     }
 
     /*card specification on tablet*/
-        .picture_left{
-            height:auto;
-        }
         .card_form2_info{
             padding-inline: 10px;
             padding-block: 12px;
