@@ -129,6 +129,10 @@ button{
 input[type="checkbox"]{
     display:none;
 }
+
+.filtres input:checked + label{
+    background-color: var(--color-primary-light);
+}
 .filtre label{
     padding: 14.58px;
     border:2px solid var(--color-secondary-dark);
