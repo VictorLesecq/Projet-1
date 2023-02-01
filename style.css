@@ -130,9 +130,9 @@ input[type="checkbox"]{
     display:none;
 }
 
-.filtres input:checked + label{
+/* .filtres input:checked + label{
     background-color: var(--color-primary-light);
-}
+} */
 .filtre label{
     padding: 14.58px;
     border:2px solid var(--color-secondary-dark);
@@ -427,6 +427,9 @@ footer h3{
         margin-top:36px;
         margin-bottom:43px;
     }
+    #localisation{
+        flex:1;
+    }
     .no-mobile{
         display:none;
     }
@@ -477,18 +480,21 @@ footer h3{
     .card_form3 .picture{
         height:130px;
     }
+    .more_info{
+        display:none;
+    }
 
     /*Mobile 3nd section configuration*/
     #activites {
-        margin-top: 105px;
+        margin-top: 65px;
         padding:20px;
     }
     
     /*Mobile Footer configuration*/
     footer{  
         display: block;
-        margin-top: 80px;
-        padding-block: 45px;
+        padding-top: 0px;
+        padding-bottom:45px;
         padding-inline: 30px;
     }
     footer div{
